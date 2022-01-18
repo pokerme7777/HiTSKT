@@ -4,7 +4,7 @@ import numpy as np
 import torch.nn.functional as F
 import torch.nn as nn
 import math
-from attention_modules import ScaledDotProductAttention, DIY_attention, MultiHeadAttention, PositionwiseFeedForward
+from attention_modules import MultiHeadAttention, PositionwiseFeedForward
 
 class EncoderLayer(nn.Module):
 	''' Compose with two layers '''
