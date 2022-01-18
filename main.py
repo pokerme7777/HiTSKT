@@ -13,7 +13,7 @@ import os.path
 import glob
 import argparse
 from loading_array import read_data_into_array
-from model_layers import myTransformer
+from model_layers import HiTSKT
 from train_test import train, test
 
 
@@ -141,7 +141,7 @@ def main():
 	print('val size:', val_array.size())
 	print('test size:', test_array.size())
 	# get my model
-	my_model = myTransformer(embedding_size=embedding_size, d_model=embedding_size, d_inner=d_inner,
+	my_model = HiTSKT(embedding_size=embedding_size, d_model=embedding_size, d_inner=d_inner,
 								n_layers=n_layers, n_head=n_head, d_k=d_k, d_v=d_v, dropout=dropout, action_position=action_size,
 								session_position=session_size, n_type_correctness=n_type_correctness, n_type_problem=num_problem,
 							n_type_skill=num_skill,session_head=n_head, session_layer=n_layers, n_type_qno=num_qno)
