@@ -181,7 +181,7 @@ class h_decoder(nn.Module):
 		return dec_output
 
 
-class myTransformer(nn.Module):
+class HiTST(nn.Module):
 	''' A sequence to sequence model with attention mechanism. '''
 
 	def __init__(
