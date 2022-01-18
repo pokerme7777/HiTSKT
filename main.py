@@ -50,7 +50,7 @@ def main():
 						help='v query dimensions')
 	parser.add_argument('--dropout', type=int, default=0.1,
 						help='dropout')
-	parser.add_argument('--dataset', type=str, default='2017.csv',
+	parser.add_argument('--dataset', type=str, default='./dataset/2017.csv',
 						help='dropout')
 
 
