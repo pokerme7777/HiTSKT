@@ -48,8 +48,6 @@ def main():
 						help='k query dimensions')
 	parser.add_argument('--d_v', type=int, default=64,
 						help='v query dimensions')
-	parser.add_argument('--d_v', type=int, default=64,
-						help='v query dimensions')
 	parser.add_argument('--dropout', type=int, default=0.1,
 						help='dropout')
 
