@@ -14,7 +14,7 @@ The requiring environments is as bellow:
 
 We list the command to run the HiTSKT on different datasets. Listed hyperparameters are the optimal parameters for the respective datasets. The preprocessed data of ASSISTment 2017, ASSISTment 2012 and Junyi datasets are provided in the ``dataset`` directory. 
 
-Due to the file size limitation of GitHub, we are not able to provide the preprocessed data of the EdNet dataset at this stage. Please download the dataset from 
+Due to the file size limitation of GitHub, we are not able to provide the preprocessed data of the EdNet dataset at this stage. Please download the ``train.csv`` from [this kaggle page](https://www.kaggle.com/c/riiid-test-answer-prediction/data), rename it to "ednet.csv" and store it in the ``dataset`` directory.
 
 Running the HiTSKT model on the ASSISTment 2012 dataset:
 
