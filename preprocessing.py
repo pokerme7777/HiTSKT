@@ -119,7 +119,7 @@ def read_Junyi(filename='./Dataset/Junyi.csv'):
     return df_select
 
 def read_ednet(filename='./Dataset/ednet.csv'):
-    ''' Read the Junyi dataset into pandas dataframe
+    ''' Read the EdNet dataset into dask dataframe
 
     Args:
         filename (str, optional): the path to the file, default is './Dataset/ednet.csv'
