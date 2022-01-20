@@ -15,6 +15,6 @@ python main.py
 ```
 
 | Args          |  Default      |              Help              | 
-| ------------- | ------------- |
+| ------------- | ------------- |         -------------
 | epoch_num     |    100        |    number of iterations        |
 | batch_size    |    64         |      number of batch           |
