@@ -1,4 +1,4 @@
-# Code reused from https://github.com/arghosh/AKT
+# Code reference: https://github.com/arghosh/AKT
 
 # import library
 import pandas as pd
