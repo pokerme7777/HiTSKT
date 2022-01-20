@@ -9,6 +9,7 @@ The requiring environments is as bellow:
 - Scikit-learn 0.24.2
 - Numpy 1.19.5
 - Pandas 1.1.5
+- Dask 2021.3.0
 
 ## Data and Data Preprocessing
 
