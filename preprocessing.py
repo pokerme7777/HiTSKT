@@ -252,7 +252,7 @@ def main():
 		
 		# Create session no for each dataset
 		df_2012 = session_division(df_2012, hour=10, minute=0, second=0)
-		df_2012 = select_student(df=df_2012, ses_min_no=3)
+		df_2012 = select_student(df=df_2012, ses_min_no=5)
 		
 		# Output full df for Pre-train
     	df_2012.to_csv('./dataset/2012.csv', index=False)
