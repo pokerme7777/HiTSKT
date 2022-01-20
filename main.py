@@ -50,12 +50,12 @@ def main():
 						help='v query dimensions')
 	parser.add_argument('--dropout', type=int, default=0.1,
 						help='dropout')
-	parser.add_argument('--dataset', type=str, default='2017.csv',
+	parser.add_argument('--dataset', type=str, default='2017',
 						help='dropout')
 
 
 	params = parser.parse_args()
-	dataset_name = './dataset/' + params.dataset
+	dataset_name = './dataset/' + params.dataset + '.csv'
 
 	df = pd.read_csv(dataset_name, low_memory=False)
 
