@@ -219,31 +219,6 @@ def session_division(df, hour=10, minute=0, second=0, ms_state=False):
     return df
 
 
-
-def train_val_test_split(df, dataset_name='2017'):
-    ''' Split the data into 5 folds
-    '''
-    fold_name = 1
-    for sub1_indx, sub2_indx in GroupKFold(n_splits=5).split(df, groups=df['studentId']):
-
-        sub1 = df.loc[sub1_indx,].reset_index(drop=True)  # 80% of dataset
-        test_set = df.loc[sub2_indx,].reset_index(drop=True)  # testing dataset
-
-        for a, b in GroupShuffleSplit(test_size=.25, n_splits=1).split(sub1, groups=sub1['studentId']):
-            train_set = sub1.loc[a,].reset_index(drop=True)  # training dataset
-            val_set = sub1.loc[b,].reset_index(drop=True)  # validation dateset
-
-        train_name = './dataset/' + str(dataset_name) + 'train' + str(fold_name) + '.csv'
-        test_name = './dataset/' + str(dataset_name) + 'test' + str(fold_name) + '.csv'
-        val_name = './dataset/' + str(dataset_name) + 'val' + str(fold_name) + '.csv'
-
-        train_set.to_csv(train_name, index=False)
-        val_set.to_csv(val_name, index=False)
-        test_set.to_csv(test_name, index=False)
-
-        fold_name += 1
-
-
 def select_student(df, ses_min_no):
 	student_use = []
 	for st_id in df.studentId.unique():
