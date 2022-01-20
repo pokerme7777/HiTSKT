@@ -1,4 +1,4 @@
-# This could reference from https://github.com/THUwangcy/HawkesKT
+# This is referenced from https://github.com/THUwangcy/HawkesKT
 
 # import library
 import pandas as pd
