@@ -1,4 +1,4 @@
-# Knowledge-tracing
+# HiTSKT: A Hierarchical Transformer model for Session-awared Knowledge Tracing
 
 ## Setups
 The requiring environments is as bellow:
