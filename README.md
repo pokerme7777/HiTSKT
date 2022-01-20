@@ -10,11 +10,23 @@ The requiring environments is as bellow:
 - Numpy 1.19.5
 - Pandas 1.1.5
 
-## Run HiTSKT
+## Data and Data Preprocessing
 
-We list the command to run the HiTSKT on different datasets. Listed hyperparameters are the optimal parameters for the respective datasets. The preprocessed data of ASSISTment 2017, ASSISTment 2012 and Junyi datasets are provided in the ``dataset`` directory. 
+We list the command to run the HiTSKT on different datasets. Listed hyperparameters are the optimal parameters for the respective datasets. The preprocessed data of ASSISTment 2017, ASSISTment 2012 and Junyi datasets are provided in the ``dataset`` directory. Due to the file size limitation of GitHub, we are not able to provide the preprocessed data of the EdNet dataset at this stage. Please download the ``train.csv`` from [this kaggle page](https://www.kaggle.com/c/riiid-test-answer-prediction/data), rename it to "ednet.csv".
 
-Due to the file size limitation of GitHub, we are not able to provide the preprocessed data of the EdNet dataset at this stage. Please download the ``train.csv`` from [this kaggle page](https://www.kaggle.com/c/riiid-test-answer-prediction/data), rename it to "ednet.csv" and store it in the ``dataset`` directory.
+Then, create a new directory ``Dataset`` and put ``ednet.csv`` into this directory.
+
+```
+mkdir Dataset
+```
+
+To preprocess the ``ednet.csv`` file, run the preprocessing script.
+
+```
+python preprocessing.py --dataset=ednet 
+```
+
+## Training and Testing HiTSKT
 
 Running the HiTSKT model on the ASSISTment 2012 dataset:
 
