@@ -11,5 +11,6 @@ The requiring environments is as bellow:
 
 ## Run HiTSKT
 Here are the example for running HiTSKT on ASSISTments2017 dataset:
-```python main.py
+```
+python main.py
 ```
