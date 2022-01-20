@@ -1,6 +1,6 @@
-# HiTSKT: A Hierarchical Transformer model for Session-awared Knowledge Tracing
+# HiTSKT: A Hierarchical Transformer Model for Session-awared Knowledge Tracing
 
-## Setups
+## Setup
 The requiring environments is as bellow:
 - Python 3.6+
 - PyTorch 1.9.0
