@@ -1,4 +1,4 @@
-# This is referenced from https://github.com/THUwangcy/HawkesKT
+# Code reference: https://github.com/THUwangcy/HawkesKT
 # import library
 import pandas as pd
 import torch
