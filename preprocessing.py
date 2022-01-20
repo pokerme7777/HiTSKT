@@ -214,8 +214,8 @@ def session_division(df, hour=10, minute=0, second=0, ms_state=False):
     df['question_no'] = df.groupby(['studentId','problemId']).cumcount()+1
     df['skill_no'] = df.groupby(['studentId','skill']).cumcount()+1
 
-    # df = df.sort_values(by=['studentId', 'startTime'])
-    # df = df.reset_index(drop=True)
+    df = df.sort_values(by=['studentId', 'startTime'])
+    df = df.reset_index(drop=True)
     return df
 
 
