@@ -17,7 +17,7 @@ def read_2017(filename='./Dataset/ASSISTment2017_full.csv'):
     # Dataset is now stored in a Pandas Dataframe (2017)
     df_ori = pd.read_csv(filename, low_memory=False)
 
-    Selecting the necessary columns
+    # Selecting the necessary columns
     df_select = (df_ori[
         ['studentId', 'action_num', 'skill', 'problemId', 'problemType', 'assignmentId', 'assistmentId', 'startTime',
          'endTime', 'timeTaken', 'correct']]).copy()
@@ -91,7 +91,6 @@ def read_Junyi(filename='./Dataset/Junyi.csv'):
         (pd.DataFrame): the dataframe of the Junyi dataset
     '''
     df_ori = pd.read_csv(filename, low_memory=False)
-    # df_ori = df
 
     # Select the necessary columns
     df_select = pd.DataFrame()
@@ -188,9 +187,9 @@ def session_division(df, hour=10, minute=0, second=0, ms_state=False):
         (pd.DataFrame): the dataframe with session id
     '''
 
-    # df = df.copy()
-    # df = df.sort_values(by=['studentId', 'startTime'])
-    # df = df.reset_index(drop=True)
+    df = df.copy()
+    df = df.sort_values(by=['studentId', 'startTime'])
+    df = df.reset_index(drop=True)
     # Create empty session no list
     session_list = []
 
@@ -263,7 +262,7 @@ def main():
     '''
     parser = argparse.ArgumentParser(description='Script for preprocess')
     
-    parser.add_argument('--dataset', type=int, default='2012',
+    parser.add_argument('--dataset', type=str, default='2012',
 						help='Dataset Name')
 	
 	params = parser.parse_args()
