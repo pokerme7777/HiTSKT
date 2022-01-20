@@ -1,4 +1,4 @@
-# Code reused from https://github.com/theophilee/learner-performance-prediction
+# Code reference: https://github.com/theophilee/learner-performance-prediction
 # import library
 import pandas as pd
 import torch
