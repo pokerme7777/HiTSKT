@@ -13,3 +13,8 @@ Here are the example for running HiTSKT on ASSISTments2017 dataset:
 ```
 python main.py
 ```
+
+| Args          |  Default      |              Help              | 
+| ------------- | ------------- |
+| epoch_num     |    100        |    number of iterations        |
+| batch_size    |    64         |      number of batch           |
