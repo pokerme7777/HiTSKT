@@ -29,7 +29,7 @@ python main.py --dataset='2017' --epoch_num=100 --batch_size=64 --session_size=1
 Running the HiTSKT model on the Junyi dataset:
 
 ```
-python main.py --dataset='junyi' --epoch_num=50 --batch_size=64 --session_size=16 --action_size=32 --embedding_size=128 --learning_rate=5e-5 --d_inner=1024 --n_layers=1 --n_head=2 --d_k=64 --d_v=64 --dropout=0.1 
+python main.py --dataset='Junyi' --epoch_num=50 --batch_size=64 --session_size=16 --action_size=32 --embedding_size=128 --learning_rate=5e-5 --d_inner=1024 --n_layers=1 --n_head=2 --d_k=64 --d_v=64 --dropout=0.1 
 ```
 
 Running the HiTSKT model on the EdNet dataset:
