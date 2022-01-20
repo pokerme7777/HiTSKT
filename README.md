@@ -28,3 +28,5 @@ python main.py
 | d_k           |    64         |      k query dimensions        |
 | d_v           |    64         |      v query dimensions        |
 | dropout       |    0.1        |      dropout                   |
+| dataset       |    2017       |      dataset name              |
+
