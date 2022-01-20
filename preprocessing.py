@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.model_selection import GroupKFold, GroupShuffleSplit
 import numpy as np
 import math
 from dask import dataframe as dd
