@@ -35,6 +35,9 @@ The main Hyperparameters' describtion of HiTSKT
 
 The default value for each parameter on four datasets
 | Dataset               |  Default Value     |
-| -------------         | -------------      |     
-| ASSISTments2017       | 	epoch_num=100, batch_size=64, session_size=16, action_size=64, embedding_size=256, learning_rate=5e-5, d_inner=2048, n_layers=1, n_head=4, d_k=64, d_v=64, dropout=0.1, dataset=2017|
+| -------------         | -------------      |  
+| ASSISTments2012       | 	epoch_num=60, batch_size=64, session_size=8, action_size=48, embedding_size=128, learning_rate=5e-5, d_inner=1024, n_layers=1, n_head=2, d_k=64, d_v=64, dropout=0.1, dataset='2012'|
+| ASSISTments2017       | 	epoch_num=100, batch_size=64, session_size=16, action_size=64, embedding_size=256, learning_rate=5e-5, d_inner=2048, n_layers=1, n_head=4, d_k=64, d_v=64, dropout=0.1, dataset='2017'|
+| Junyi       | 	epoch_num=50, batch_size=64, session_size=16, action_size=32, embedding_size=128, learning_rate=5e-5, d_inner=1024, n_layers=1, n_head=2, d_k=64, d_v=64, dropout=0.1, dataset='Junyi'|
+| EdNet       | 	epoch_num=40, batch_size=64, session_size=16, action_size=32, embedding_size=128, learning_rate=8e-5, d_inner=1024, n_layers=1, n_head=2, d_k=64, d_v=64, dropout=0.1, dataset='ednet'|
 
