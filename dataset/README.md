@@ -7,4 +7,4 @@
 ## Original data source:
 - ASSESSments: https://sites.google.com/site/assistmentsdata
 - Junyi: https://www.kaggle.com/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv
-- https://www.kaggle.com/c/riiid-test-answer-prediction/rules
+- EdNet: https://www.kaggle.com/c/riiid-test-answer-prediction/rules
