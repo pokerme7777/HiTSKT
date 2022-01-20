@@ -139,7 +139,7 @@ def read_ednet(filename='./Dataset/ednet.csv'):
     df1['endTime'] = df1['startTime']  # to second
 
     # Drop nan/null rows in the skill column
-    df1 = df1[df_select.skill.notnull()]
+    df1 = df1[df1.skill.notnull()]
 
     # Initialization of correct value: all the values less than 1 will be 0.
     df1['correct'] = df1['correct'].apply(lambda x: 1 if x else 0)
