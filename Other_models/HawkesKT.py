@@ -1,3 +1,5 @@
+# This could reference from https://github.com/THUwangcy/HawkesKT
+
 # import library
 import pandas as pd
 import torch
