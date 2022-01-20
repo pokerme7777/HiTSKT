@@ -240,38 +240,38 @@ def main():
 	
 	params = parser.parse_args()
 	dataset_name = params.dataset
-	
+
 	if dataset == '2012':
 		# Load the data
-    	df_2012 = read_2012()
-		
-	    # Featurization skill column
-    	df_2012 = factorize_skill_problem(df_2012)
-		
+		df_2012 = read_2012()
+
+		# Featurization skill column
+		df_2012 = factorize_skill_problem(df_2012)
+
 		# Create session no for each dataset
 		df_2012 = session_division(df_2012, hour=10, minute=0, second=0)
 		df_2012 = select_student(df=df_2012, ses_min_no=5)
-		
+
 		# Output full df for Pre-train
-    	df_2012.to_csv('./dataset/2012.csv', index=False)
-		
+		df_2012.to_csv('./dataset/2012.csv', index=False)
+
 	elif dataset == '2017':
 		df_2017 = read_2017()
 		df_2017 = factorize_skill_problem(df_2017)
 		df_2017 = session_division(df_2017, hour=10, minute=0, second=0)
 		df_2017.to_csv('./dataset/2017.csv', index=False)
-		
+
 	elif dataset == 'Junyi':
 		df_Junyi = read_Junyi()
 		df_Junyi = factorize_skill_problem(df_Junyi)
 		df_Junyi = session_division(df_Junyi, hour=10, minute=0, second=0)
 		df_Junyi.to_csv('./dataset/Junyi.csv', index=False)
-		
+
 	elif dataset == 'ednet':
 		df_ednet = read_ednet()
 		df_ednet = factorize_skill_problem(df_ednet)
 		df_ednet = session_division(df_ednet, hour=10, minute=0, second=0, ms_state=True)
-    	df_ednet = select_student(df=df_ednet, ses_min_no=5)
+		df_ednet = select_student(df=df_ednet, ses_min_no=5)
 		df_ednet.to_csv('./dataset/ednet.csv', index=False)
 
 
