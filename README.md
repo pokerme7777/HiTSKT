@@ -14,14 +14,14 @@ Here are the example for running HiTSKT on ASSISTments2017 dataset:
 python main.py
 ```
 
-| Args          |  Default      |              Help              | 
+| Args          |  Default      |              Description              | 
 | ------------- | ------------- |         -------------
-| epoch_num     |    100        |    number of iterations        |
-| batch_size    |    64         |      number of batch           |
-| session_size  |    16         |      number of sessions        |
-| action_size   |    64         |  number of interactions in each session  |
-|embedding_size |    256        |      embedding dimensions      |
-| learning_rate |    5e-5       |      learning rate             |
+| epoch_num     |    100        |    Number of epochs        |
+| batch_size    |    64         |      The batch size           |
+| session_size  |    16         |      Number of sessions        |
+| action_size   |    64         |  Number of interactions in each session  |
+|embedding_size |    256        |      Dimension of the      |
+| learning_rate |    5e-5       |      Learning rate of the training of the model         |
 | d_inner       |    2048       |      FFN hidden dimension      |
 | n_layers      |    1          |      number of layers          |
 | n_head        |    4          |   number of head for multihead attention           |
