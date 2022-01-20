@@ -128,7 +128,6 @@ def read_ednet(filename='./Dataset/ednet.csv'):
         (pd.DataFrame): the dataframe of the ednet dataset
     '''
     df_ori = dd.read_csv(filename, low_memory=False)
-    # df_ori = df
 
     # Select the necessary columns
     df1 = df_ori[['user_id','content_id','timestamp','task_container_id','answered_correctly']]
@@ -187,7 +186,6 @@ def session_division(df, hour=10, minute=0, second=0, ms_state=False):
         (pd.DataFrame): the dataframe with session id
     '''
 
-    df = df.copy()
     df = df.sort_values(by=['studentId', 'startTime'])
     df = df.reset_index(drop=True)
     # Create empty session no list
