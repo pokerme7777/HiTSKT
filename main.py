@@ -43,7 +43,7 @@ def main():
 	parser.add_argument('--n_layers', type=int, default=1,
 						help='number of layers')
 	parser.add_argument('--n_head', type=int, default=4,
-						help='number of layers')
+						help='number of head for multihead attention')
 	parser.add_argument('--d_k', type=int, default=64,
 						help='k query dimensions')
 	parser.add_argument('--d_v', type=int, default=64,
