@@ -233,11 +233,11 @@ def select_student(df, ses_min_no):
 def main():
     ''' The main function of the preprocessing script
     '''
-    parser = argparse.ArgumentParser(description='Script for preprocess')
-    
-    parser.add_argument('--dataset', type=str, default='2012',
+	parser = argparse.ArgumentParser(description='Script for preprocess')
+
+	parser.add_argument('--dataset', type=str, default='2012',
 						help='Dataset Name')
-	
+
 	params = parser.parse_args()
 	dataset_name = params.dataset
 
