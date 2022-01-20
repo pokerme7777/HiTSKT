@@ -20,19 +20,6 @@ import glob
 
 
 
-def select_student(df,ses_min_no):
-	student_use = []
-	for st_id in df.studentId.unique():
-		df_student = df[df.studentId == st_id]
-		if max(df_student.session_no.to_list()) >=ses_min_no:
-			student_use.append(st_id)
-
-	df = df[df['studentId'].isin(student_use)]
-	df = df.sort_values(by=['studentId', 'startTime'])
-	df = df.reset_index(drop=True)
-
-	return df
-
 def split_dataset(df):
 
     train_idx = []
