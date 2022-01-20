@@ -12,7 +12,9 @@ The requiring environments is as bellow:
 
 ## Run HiTSKT
 
-We list the command to run the HiTSKT on different datasets. Listed hyperparameters are the optimal parameters for the respective datasets.
+We list the command to run the HiTSKT on different datasets. Listed hyperparameters are the optimal parameters for the respective datasets. The preprocessed data of ASSISTment 2017, ASSISTment 2012 and Junyi datasets are provided in the ``dataset`` directory. 
+
+Due to the file size limitation of GitHub, we are not able to provide the preprocessed data of the EdNet dataset at this stage. Please download the dataset from 
 
 Running the HiTSKT model on the ASSISTment 2012 dataset:
 
