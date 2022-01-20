@@ -8,3 +8,8 @@ The requiring environments is as bellow:
 - Scikit-learn 0.24.2
 - Numpy 1.19.5
 - Pandas- 1.1.5
+
+## Run HiTSKT
+Here are the example for running HiTSKT on ASSISTments2017 dataset:
+```python main.py
+```
