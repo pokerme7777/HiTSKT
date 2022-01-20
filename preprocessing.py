@@ -272,7 +272,7 @@ def main():
 	elif dataset == 'ednet':
 		df_ednet = read_ednet()
 		df_ednet = factorize_skill_problem(df_ednet)
-		df_ednet = session_division(df_ednet, hour=10, minute=0, second=0)
+		df_ednet = session_division(df_ednet, hour=10, minute=0, second=0, ms_state=True)
     	df_ednet = select_student(df=df_ednet, ses_min_no=5)
 		df_ednet.to_csv('./dataset/ednet.csv', index=False)
 
