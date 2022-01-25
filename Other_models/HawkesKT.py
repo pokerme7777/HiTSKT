@@ -327,7 +327,7 @@ def main():
     # checkpoint = torch.load(os.path.join(model_path,  'val_8'))
     # hkkt_model.load_state_dict(checkpoint['model_state_dict'])
 
-    for epoch in range(8, epoch_num):
+    for epoch in range(epoch_num):
         loss, train_AUC = hkkt_train(train_data=train_data, model=hkkt_model, optimizer=optimizer, batch_size=batch_size)
 
         print('train_one_epoch: ', loss, 'train_AUC:', train_AUC)
