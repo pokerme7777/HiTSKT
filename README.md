@@ -29,11 +29,6 @@ python preprocessing.py --dataset=ednet
 
 ## Training and Testing HiTSKT
 
-Running the HiTSKT model on the ASSISTment 2012 dataset:
-
-```
-python main.py --dataset='2012' --epoch_num=60 --batch_size=64 --session_size=8 --action_size=48 --embedding_size=128 --learning_rate=5e-5 --d_inner=1024 --n_layers=1 --n_head=2 --d_k=64 --d_v=64 --dropout=0.1 
-```
 
 Running the HiTSKT model on the ASSISTment 2017 dataset:
 
