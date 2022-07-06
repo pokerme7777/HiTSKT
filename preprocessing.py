@@ -34,53 +34,6 @@ def read_2017(filename='./Dataset/ASSISTment2017_full.csv'):
 
     return df_select
 
-
-def read_2012(filename='./Dataset/ASSISTment2012_full.csv'):
-    ''' Read the 2012 dataset into pandas dataframe
-
-    Args:
-        filename (str, optional): the path to the file, default is './Dataset/ASSISTment2012_full.csv'
-
-    Returns:
-        (pd.DataFrame): the dataframe of the ASSISTment 2012 dataset
-    '''
-    df_ori = pd.read_csv(filename, low_memory=False)
-
-    # Select the necessary columns
-    df_select = pd.DataFrame()
-    df_select['studentId'] = df_ori['user_id']
-    df_select['skill'] = df_ori['skill']
-    df_select['problemType'] = df_ori['problem_type']
-    df_select['problemId'] = df_ori['problem_id']
-    df_select['correct'] = df_ori['correct']
-
-    # The original value is a date string in the format of 'YYYY-mm-dd\nHH:MM:SS'
-    # We need to convert it into datetime type
-    df_select['startTime'] = pd.to_datetime(df_ori['start_time']).astype(int) // (10 ** 9)  # to second
-    df_select['endTime'] = pd.to_datetime(df_ori['end_time']).astype(int) // (10 ** 9)  # to second
-
-    # Calculate the time taken for the interaction
-    # The substraction of two datetime object is by default in nanosecond
-    # So we need to convert it from nanosecond to second
-    df_select['timeTaken'] = df_select['endTime'] - df_select['startTime']
-
-    # Drop nan/null rows in the skill column
-    df_select = df_select[df_select.skill.notnull()]
-
-    # Initialization of correct value: all the values less than 1 will be 0.
-    df_select['correct'] = df_select['correct'].apply(lambda x: 0 if x < 1 else 1)
-
-    # Sort the dataframe using studentid, starttime (Ascending)
-    df_select = df_select.sort_values(by=['studentId', 'startTime'])
-
-    # Delete all the rows in which timeTaken is too big
-    df_select = df_select[df_select.timeTaken < 9999]
-
-    # Reset index
-    df_select = df_select.reset_index(drop=True)
-
-    return df_select
-
 def read_Junyi(filename='./Dataset/Junyi.csv'):
     ''' Read the Junyi dataset into pandas dataframe
 
@@ -241,21 +194,7 @@ def main():
     params = parser.parse_args()
     dataset_name = params.dataset
 
-    if dataset == '2012':
-        # Load the data
-        df_2012 = read_2012()
-
-        # Featurization skill column
-        df_2012 = factorize_skill_problem(df_2012)
-
-        # Create session no for each dataset
-        df_2012 = session_division(df_2012, hour=10, minute=0, second=0)
-        df_2012 = select_student(df=df_2012, ses_min_no=5)
-
-        # Output full df for Pre-train
-        df_2012.to_csv('./dataset/2012.csv', index=False)
-
-    elif dataset == '2017':
+    if dataset == '2017':
         df_2017 = read_2017()
         df_2017 = factorize_skill_problem(df_2017)
         df_2017 = session_division(df_2017, hour=10, minute=0, second=0)
