@@ -1,4 +1,10 @@
 # HiTSKT: A Hierarchical Transformer Model for Session-awared Knowledge Tracing
+## Keywords
+-  Hierarchical Transformer
+-  Session-awared Knowledge Tracing
+-  Knowledge Tracing
+- 
+🔥This is the code for the paper HiTSKT: A Hierarchical Transformer Model for Session-awared Knowledge Tracing, accepted by Knowledge-Based Systems \[[Papge]([https://hydra-vl4ai.github.io](https://www.sciencedirect.com/science/article/pii/S0950705123010481))\].🔥
 
 ## Setup
 
